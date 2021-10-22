@@ -1,3 +1,2 @@
-# ajax-project
+# Algorithms Practice
 
-A dynamic HTML, CSS, and JavaScript solo project.
