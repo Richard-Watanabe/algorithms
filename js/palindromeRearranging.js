@@ -1,14 +1,18 @@
 function palindromeRearranging(inputString) {
-  var newString = inputString.split(' ').join('');
-  var reversed = '';
-  for (var i = newString.length - 1; i >= 0; i--) {
-    reversed += newString[i];
+  var odd = 0;
+  var arr = inputString.split('');
+  var el;
+  var pos;
+  while (arr.length) {
+    el = arr.pop();
+    pos = arr.indexOf(el);
+    if (pos < 0) {
+      odd++;
+    } else {
+      arr.splice(pos, 1);
+    }
   }
-  if (newString === reversed) {
-    return true;
-  } else {
-    return false;
-  }
+  return odd < 2;
 }
 
 palindromeRearranging();
