@@ -1,7 +1,14 @@
-function isIPv4Address(inputString) {
+function solution(inputString) {
   const array = inputString.split('.');
-  if (array.length !== 4) return false;
-  return array.every(x => x !== '' && Number(x) >= 0 && Number(x) <= 255);
+  if (array.length === 4) {
+    return array.every(number => {
+      if (number >= 0 && number <= 255 && number !== '' && number !== '00' && number !== '01') {
+        return true;
+      }
+      return false;
+    });
+  }
+  return false;
 }
 
-isIPv4Address();
+solution();
