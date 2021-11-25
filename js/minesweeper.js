@@ -19,6 +19,21 @@ function minesweeper(matrix) {
           game[i][j]++;
         }
       }
+      if (matrix[i][j + 1] !== undefined) {
+        if (matrix[i][j + 1]) {
+          game[i][j]++;
+        }
+      }
+      if (matrix[i - 1] !== undefined) {
+        if (matrix[i - 1][j - 1]) {
+          game[i][j]++;
+        }
+      }
+      if (matrix[i - 1] !== undefined) {
+        if (matrix[i - 1][j + 1]) {
+          game[i][j]++;
+        }
+      }
     }
   }
   return game;
