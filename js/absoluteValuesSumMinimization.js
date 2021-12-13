@@ -6,7 +6,8 @@ function solution(a) {
     }, 0);
     values.push(sum);
   });
-  return a;
+  const lowest = Math.min(...values);
+  return a[values.indexOf(lowest)];
 }
 
 solution();
